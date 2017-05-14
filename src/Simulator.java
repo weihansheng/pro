@@ -47,10 +47,22 @@ public class Simulator {
             if (!pipeline.getWriteBack().isStalled()) {
                 pipeline.getWriteBack().writeBack(clock);
             }
+
+            if (!pipeline.getMem().isStalled()) {
+                pipeline.getMem().execute();
+            }
+            //更新PreMem使后续的指令可以进入PreMem
+            pipeline.getPreMEM().flush();
+            pipeline.getPostMEM().flush();
+            System.out.println("clock:"+clock+"--pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
+            System.out.println("clock:"+clock+"--pipeline.getPostMEM().buffer"+pipeline.getPostMEM().buffer.toString());
             //EX
             if (!pipeline.getExecutor().isStalled()) {
                 pipeline.getExecutor().execute();
             }
+            pipeline.getPreMEM().flush();
+            System.out.println("clock:"+clock+"-flush-pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
+            System.out.println("clock:"+clock+"-flush-pipeline.getPostMEM().buffer"+pipeline.getPostMEM().buffer.toString());
             //ISSUE //发射指令
             if (!pipeline.getIssue().isStalled()) {
                 pipeline.getIssue().issue(clock);
@@ -70,6 +82,7 @@ public class Simulator {
                     }
                 }
             }
+            pipeline.getPreIssue().flush();
             //ISSUE发射指令后清空Pre-Issue
             if(pipeline.getIssue().need[0]>-1){
                 pipeline.getPreIssue().remove(pipeline.getIssue().need[0]);
@@ -80,6 +93,7 @@ public class Simulator {
                 }
             }
             flush(pipeline);
+            //System.out.println("clock:"+clock+"-flush-pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
             //Writer.write(args[1], show(clock, pipeline));
             Writer.write("/Users/Johan007/proj2/simulationTest.txt", show(clock, pipeline));
             if(pipeline.getInsFetch().executedIns.length()>0){
@@ -93,13 +107,11 @@ public class Simulator {
 
 
     public void flush(Pipeline pipeline) {
-        pipeline.getPreIssue().flush();
+//        pipeline.getPreIssue().flush();
         pipeline.getPreALU().flush();
-        //pipeline.getPreALUB().flush();
-        pipeline.getPreMEM().flush();
+//        pipeline.getPreMEM().flush();
         pipeline.getPostALU().flush();
-        //pipeline.getPostALUB().flush();
-        pipeline.getPostMEM().flush();
+//        pipeline.getPostMEM().flush();
 
     }
 

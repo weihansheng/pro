@@ -21,7 +21,13 @@ public class PreIssue implements Buffers{
 	public boolean in(Object object) {
 		
 		inBuffer[in] = (String)object;
+		//System.out.println("-------"+inBuffer[in]);
 		in++;
+        //防止两个同时进入PreIssue时，不能判断RAW
+        for(int i=0;i<in;i++){
+            buffer.offer(inBuffer[i]);//作为List使用时,一般采用add / get方法来 压入/获取对象;作为Queue使用时,才会采用 offer/poll/take等方法
+        }
+        in = 0;
 		return false;
 	}
 
@@ -36,22 +42,22 @@ public class PreIssue implements Buffers{
 	public Object remove(int index) {
 		return this.buffer.remove(index);
 	}
-	public String type(int index) {
-		String assembly = this.buffer.get(index);
-		String type = "";
-		
-		if (assembly.contains("LW\t")||assembly.contains("SW\t")) {
-			//MEM\
-			type = "MEM";
-		}else if(assembly.contains("SLL\t")||assembly.contains("SRL\t")||assembly.contains("SRA\t")||assembly.contains("MUL\t")){
-			//ALUB
-			type = "ALUB";
-		}else{
-			//ALU
-			type = "ALU";
-		}
-		return type;
-	}
+//	public String type(int index) {
+//		String assembly = this.buffer.get(index);
+//		String type = "";
+//
+//		if (assembly.contains("LW\t")||assembly.contains("SW\t")) {
+//			//MEM\
+//			type = "MEM";
+//		}else if(assembly.contains("SLL\t")||assembly.contains("SRL\t")||assembly.contains("SRA\t")||assembly.contains("MUL\t")){
+//			//ALUB
+//			type = "ALUB";
+//		}else{
+//			//ALU
+//			type = "ALU";
+//		}
+//		return type;
+//	}
 	public int haveElem(int from) {
 		for(int i=from;i<this.buffer.size();i++){
 			if(pipeline.getIssue().noHazards(i)){
@@ -132,6 +138,7 @@ public class PreIssue implements Buffers{
 		return false;
 	}
 	public boolean mayRAW4Branch(String r) {
+		//System.out.println(buffer.toString());
 		for(int i=0;i<buffer.size();i++ ){
 			if(buffer.get(i).contains("SW\t")){
 				continue;

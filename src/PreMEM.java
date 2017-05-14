@@ -1,6 +1,7 @@
 import java.util.LinkedList;
 
 public class PreMEM implements Buffers{
+
 	LinkedList<String> buffer;
 	String [] inBuffer = new String[4];
 	String [] outBuffer = new String[4];
@@ -13,7 +14,7 @@ public class PreMEM implements Buffers{
 	@Override
 	public int hasEmptySlot() {
 		
-		return 2 - this.buffer.size();
+		return 1 - this.buffer.size();
 	}
 
 	@Override

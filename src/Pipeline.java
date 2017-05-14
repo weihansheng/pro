@@ -6,6 +6,7 @@ public class Pipeline {
     InstructionFetch insFetch;
     Issue issue;
     Executor executor;
+    Mem mem;
     WriteBack writeBack;
     Memory memory = new Memory();
     Register register = new Register();
@@ -23,8 +24,17 @@ public class Pipeline {
         insFetch = new InstructionFetch(this);
         issue = new Issue(this);
         executor = new Executor(this);
+        mem= new Mem(this);
         writeBack = new WriteBack(this);
         preIssue = new PreIssue(this);
+    }
+
+    public Mem getMem() {
+        return mem;
+    }
+
+    public void setMem(Mem mem) {
+        this.mem = mem;
     }
 
     public InstructionFetch getInsFetch() {

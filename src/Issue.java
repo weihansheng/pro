@@ -22,101 +22,27 @@ public class Issue {
                 }
                 index = idle(colock, index);
                 if(index>=0){
-                    String type = this.pipeline.getPreIssue().type(index);
-                    if(type.equals("MEM")){
-                        if(MEM()){
-                            //issue
-                            String assembly = (String) this.pipeline.getPreIssue().get(index);
-                            if(assembly.contains("LW\t")){
-                                if(need[0]>-1){
-                                    if(noPreStore4LW(need[0]+1, index)){
-                                        //assembly = (String) this.pipeline.getPreIssue().remove(index);
-                                        if(need[0]==-1){
-                                            need[0] = index;
-                                        }else{
-                                            need[1] = index;
-                                        }
-                                        this.pipeline.getPreMEM().in(assembly);
-                                        this.nums -= 1;
-                                        if (this.nums > 0) {
-                                            issue(colock);
-                                        }
-                                    }
-                                }else{
-                                    if(noPreStore4LW(0, index)){
-                                        //assembly = (String) this.pipeline.getPreIssue().remove(index);
-                                        if(need[0]==-1){
-                                            need[0] = index;
-                                        }else{
-                                            need[1] = index;
-                                        }
-                                        this.pipeline.getPreMEM().in(assembly);
-                                        this.nums -= 1;
-                                        if (this.nums > 0) {
-                                            issue(colock);
-                                        }
-                                    }
-                                }
-                            }else{
-                                if(noPreStore4SW(index)){
-                                    //assembly = (String) this.pipeline.getPreIssue().remove(index);
-                                    if(need[0]==-1){
-                                        need[0] = index;
-                                    }else{
-                                        need[1] = index;
-                                    }
-//									System.out.println("NEED:  "+need[0]+",  "+need[1]);
-                                    this.pipeline.getPreMEM().in(assembly);
-                                    this.nums -= 1;
-                                    if (this.nums > 0) {
-                                        issue(colock);
+                    //String type = this.pipeline.getPreIssue().type(index);
 
-                                    }
-                                }
-                            }
-                        }else{
-                            index = this.pipeline.getPreIssue().haveElem(index+1);
-                        }
-
-                    }
-                    if(type.equals("ALU")){
                         if(ALU()){
                             String assembly = (String) this.pipeline.getPreIssue().get(index);
                             //issue
-//							this.pipeline.getPreIssue().remove(index)
-                            this.pipeline.getPreALU().in(assembly);
-                            if(need[0]==-1){
-                                need[0] = index;
-                            }else{
-                                need[1] = index;
-                            }
-                            this.nums -= 1;
-                            if (this.nums > 0) {
-                                issue(colock);
+                            if(noHazards(index)){
+    //							this.pipeline.getPreIssue().remove(index)
+                                this.pipeline.getPreALU().in(assembly);
+                                if(need[0]==-1){
+                                    need[0] = index;
+                                }else{
+                                    need[1] = index;
+                                }
+                                this.nums -= 1;
+                                if (this.nums > 0) {
+                                    issue(colock);
+                                }
                             }
                         }else{
                             index = this.pipeline.getPreIssue().haveElem(index+1);
                         }
-                    }
-//                    if(type.equals("ALUB")){
-//                        if(ALUB()){
-//                            //issue
-//                            String assembly = (String) this.pipeline.getPreIssue().get(index);
-////							this.pipeline.getPreIssue().remove(index)
-//                            this.pipeline.getPreALUB().in(assembly);
-//                            if(need[0]==-1){
-//                                need[0] = index;
-//                            }else{
-//                                need[1] = index;
-//                            }
-//                            this.nums -= 1;
-//                            if (this.nums > 0) {
-//                                issue(colock);
-//                            }
-//                        }else{
-//                            index = this.pipeline.getPreIssue().haveElem(index+1);
-//                        }
-//                    }
 
 
                 }
@@ -140,12 +66,6 @@ public class Issue {
         }
         return false;
     }
-//    public boolean ALUB() {
-//        if(this.pipeline.getPreALUB().hasEmptySlot() > 0){
-//            return true;
-//        }
-//        return false;
- //   }
     public boolean noHazards(int index) {
         return !WAW(index) && !WAR(index) && !RAW(index);
     }

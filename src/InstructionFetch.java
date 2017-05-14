@@ -37,6 +37,7 @@ public class InstructionFetch {
                 nums = 1;
             }else if(slots >= 2){//fetch 2 instruction
                 binary = pipeline.getMemory().readCode(pipeline.getPc());
+                //System.out.println("1:binary::::::"+binary);
                 assembly = decode(binary);
                 if (isBranch(binary)) {
                     processBranch(assembly);
@@ -51,9 +52,12 @@ public class InstructionFetch {
                 }else{
                     pipeline.getPreIssue().in(assembly);
                     pipeline.pcInc();
+                    //String str=pipeline.getPreIssue().buffer.toString();
+                    //System.out.println("1:pipeline.getPreIssue().buffer="+pipeline.getPreIssue().buffer.toString());
                 }
 
                 binary = pipeline.getMemory().readCode(pipeline.getPc());
+                //System.out.println("2:binary::::::"+binary);
                 assembly = decode(binary);
                 if (isBranch(binary)) {
                     processBranch(assembly);
@@ -68,6 +72,7 @@ public class InstructionFetch {
                 }else{
                     pipeline.getPreIssue().in(assembly);
                     pipeline.pcInc();
+                    //System.out.println("1:pipeline.getPreIssue().buffer="+pipeline.getPreIssue().buffer.toString());
                 }
             }
 
