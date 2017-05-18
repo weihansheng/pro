@@ -60,6 +60,7 @@ public class PreALU implements Buffers{
 	}
 	public void flush() {
 		for(int i=out-1;i>-1;i--){
+			//System.out.println("PreALU remove"+outBuffer[i]);
 			buffer.remove(outBuffer[i]);
 		}
 		for(int i=0;i<in;i++){

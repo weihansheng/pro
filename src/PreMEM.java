@@ -29,7 +29,12 @@ public class PreMEM implements Buffers{
 	public Object out() {
 		outBuffer[out] = buffer.peek();
 		out++;
-		return buffer.peek();
+		Object obj=buffer.peek();
+		for(int i=out-1;i>-1;i--){
+			buffer.remove(outBuffer[i]);
+		}
+		out=0;
+		return obj;
 	}
 
 	public boolean mayWAW(String rd) {

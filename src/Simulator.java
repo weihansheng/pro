@@ -48,31 +48,35 @@ public class Simulator {
                 pipeline.getWriteBack().writeBack(clock);
             }
 
+            //pipeline.getPostMEM().flush();
+            //pipeline.getPostALU().flush();
             if (!pipeline.getMem().isStalled()) {
                 pipeline.getMem().execute();
             }
             //更新PreMem使后续的指令可以进入PreMem
-            pipeline.getPreMEM().flush();
-            pipeline.getPostMEM().flush();
-            System.out.println("clock:"+clock+"--pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
-            System.out.println("clock:"+clock+"--pipeline.getPostMEM().buffer"+pipeline.getPostMEM().buffer.toString());
+            //pipeline.getPreMEM().flush();
+
+            //System.out.println("clock:"+clock+"--pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
+            //System.out.println("clock:"+clock+"--pipeline.getPostMEM().buffer"+pipeline.getPostMEM().buffer.toString());
             //EX
             if (!pipeline.getExecutor().isStalled()) {
                 pipeline.getExecutor().execute();
             }
-            pipeline.getPreMEM().flush();
-            System.out.println("clock:"+clock+"-flush-pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
-            System.out.println("clock:"+clock+"-flush-pipeline.getPostMEM().buffer"+pipeline.getPostMEM().buffer.toString());
+            //pipeline.getPreALU().flush();
+            //pipeline.getPreMEM().flush();
+            //System.out.println("clock:"+clock+"-flush-pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
+            //System.out.println("clock:"+clock+"-flush-pipeline.getPostMEM().buffer"+pipeline.getPostMEM().buffer.toString());
             //ISSUE //发射指令
             if (!pipeline.getIssue().isStalled()) {
                 pipeline.getIssue().issue(clock);
                 pipeline.getIssue().setNums();
             }
-
+            //System.out.println("clock:"+clock+"-flush-pipeline.getPreALU().buffer"+pipeline.getPreALU().buffer.toString());
+            //System.out.println("clock:"+clock+"-flush-pipeline.getPostALU().buffer"+pipeline.getPostALU().buffer.toString());
             //IF
             if(!pipeline.getInsFetch().isStalled()){
                 isBreak = pipeline.getInsFetch().fetch();
-                System.out.println("isBreak："+isBreak);
+                //System.out.println("isBreak："+isBreak);
             }else{
                 if(pipeline.getInsFetch().waitingIns.length()>0){
                     //没有RAW
@@ -82,7 +86,8 @@ public class Simulator {
                     }
                 }
             }
-            pipeline.getPreIssue().flush();
+            //System.out.println("clock:"+clock+"--pipeline.getPreIssue().buffer"+pipeline.getPreIssue().buffer.toString());
+            //pipeline.getPreIssue().flush();
             //ISSUE发射指令后清空Pre-Issue
             if(pipeline.getIssue().need[0]>-1){
                 pipeline.getPreIssue().remove(pipeline.getIssue().need[0]);
@@ -107,11 +112,15 @@ public class Simulator {
 
 
     public void flush(Pipeline pipeline) {
-//        pipeline.getPreIssue().flush();
-        pipeline.getPreALU().flush();
-//        pipeline.getPreMEM().flush();
+        pipeline.getPostMEM().flush();
         pipeline.getPostALU().flush();
-//        pipeline.getPostMEM().flush();
+        pipeline.getPreMEM().flush();
+        pipeline.getPreALU().flush();
+
+        pipeline.getPreIssue().flush();
+
+
+
 
     }
 
@@ -149,11 +158,10 @@ public class Simulator {
         buffer.append(showIFUnit(pipeline));
         buffer.append(showPreIssue(pipeline));
         buffer.append(showPreALU(pipeline));
-        buffer.append(showPostALU(pipeline));
-        //buffer.append(showPreALUB(pipeline));
-        //buffer.append(showPostALUB(pipeline));
         buffer.append(showPreMEM(pipeline));
         buffer.append(showPostMEM(pipeline));
+        buffer.append(showPostALU(pipeline));
+
         buffer.append("\n");
         buffer.append(showRegisters(pipeline));
         buffer.append("\n");
@@ -192,57 +200,42 @@ public class Simulator {
         }
         return buffer.toString();
     }
-    public String showPostALU(Pipeline pipeline) {
-        int size = pipeline.getPostALU().size();
-        StringBuffer buffer = new StringBuffer();
-        if (size==1) {
-            buffer.append(String.format("Post-ALU Buffer:[%s]\n", ((String)pipeline.getPostALU().get(0)).split("@")[0]));
-        }else{
-            buffer.append(String.format("Post-ALU Buffer:\n"));
-        }
-        return buffer.toString();
-    }
-//    public String showPreALUB(Pipeline pipeline) {
-//        int size = pipeline.getPreALUB().size();
-//        StringBuffer buffer = new StringBuffer();
-//        buffer.append("Pre-ALUB Queue:\n");
-//        for(int i=0;i<size;i++){
-//            buffer.append(String.format("\tEntry %d:[%s]\n", i, (String)pipeline.getPreALUB().get(i)));
-//        }
-//        for(int i=size;i<2;i++){
-//            buffer.append(String.format("\tEntry %d:\n", i));
-//        }
-//        return buffer.toString();
-//    }
-//    public String showPostALUB(Pipeline pipeline) {
-//        int size = pipeline.getPostALUB().size();
-//        StringBuffer buffer = new StringBuffer();
-//        if (size==1) {
-//            buffer.append(String.format("Post-ALUB Buffer:[%s]\n", ((String)pipeline.getPostALUB().get(0)).split("@")[0]));
-//        }else{
-//            buffer.append(String.format("Post-ALUB Buffer:\n"));
-//        }
-//        return buffer.toString();
-//    }
     public String showPreMEM(Pipeline pipeline) {
         int size = pipeline.getPreMEM().size();
         StringBuffer buffer = new StringBuffer();
-        buffer.append("Pre-MEM Queue:\n");
+        /*buffer.append("Pre-MEM Queue:");
         for(int i=0;i<size;i++){
-            buffer.append(String.format("\tEntry %d:[%s]\n", i, (String)pipeline.getPreMEM().get(i)));
-        }
-        for(int i=size;i<2;i++){
+            buffer.append(String.format("\t[%s]\n", (String)pipeline.getPreMEM().get(i)));
+        }*/
+        /*for(int i=size;i<2;i++){
             buffer.append(String.format("\tEntry %d:\n", i));
+        }*/
+        if (size==1) {
+            buffer.append(String.format("Pre-MEM Queue:[%s]\n", ((String)pipeline.getPreMEM().get(0)).split("@")[0]));
+        }else{
+            buffer.append(String.format("Pre-MEM Queue:\n"));
         }
         return buffer.toString();
     }
+
+
     public String showPostMEM(Pipeline pipeline) {
         int size = pipeline.getPostMEM().size();
         StringBuffer buffer = new StringBuffer();
         if (size==1) {
-            buffer.append(String.format("Post-MEM Buffer:[%s]\n", ((String)pipeline.getPostMEM().get(0)).split("@")[0]));
+            buffer.append(String.format("Post-MEM Queue:[%s]\n", ((String)pipeline.getPostMEM().get(0)).split("@")[0]));
         }else{
-            buffer.append(String.format("Post-MEM Buffer:\n"));
+            buffer.append(String.format("Post-MEM Queue:\n"));
+        }
+        return buffer.toString();
+    }
+    public String showPostALU(Pipeline pipeline) {
+        int size = pipeline.getPostALU().size();
+        StringBuffer buffer = new StringBuffer();
+        if (size==1) {
+            buffer.append(String.format("Post-ALU Queue:[%s]\n", ((String)pipeline.getPostALU().get(0)).split("@")[0]));
+        }else{
+            buffer.append(String.format("Post-ALU Queue:\n"));
         }
         return buffer.toString();
     }

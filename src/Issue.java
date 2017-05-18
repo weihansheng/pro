@@ -101,8 +101,10 @@ public class Issue {
                     || this.pipeline.getPostALU().mayRAW(r1) || this.pipeline.getPostMEM().mayRAW(r1)
                     || this.pipeline.getPreIssue().mayRAW(assembly);
         }else if(r2.contains("R")){
-            flag = this.pipeline.getPreALU().mayRAW(r2) ||  this.pipeline.getPreMEM().mayRAW(r2)
-                    || this.pipeline.getPostALU().mayRAW(r2) ||  this.pipeline.getPostMEM().mayRAW(r2)
+            //MUL R5, R3, R4   R4的PreMem RAW没有检测出来
+            flag = this.pipeline.getPreALU().mayRAW(r2) ||
+                    this.pipeline.getPreMEM().mayRAW(r2)
+                    | this.pipeline.getPostALU().mayRAW(r2) ||  this.pipeline.getPostMEM().mayRAW(r2)
                     || this.pipeline.getPreALU().mayRAW(r1) || this.pipeline.getPreMEM().mayRAW(r1)
                     || this.pipeline.getPostALU().mayRAW(r1) || this.pipeline.getPostMEM().mayRAW(r1)
                     || this.pipeline.getPreIssue().mayRAW(assembly);

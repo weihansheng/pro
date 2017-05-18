@@ -117,10 +117,19 @@ public class PreIssue implements Buffers{
 			if(buffer.contains("SW\t")){
 				continue;
 			}
+
 			String s1 = Adaptor.getOperands(buffer.get(i))[0];
+			String s2 = Adaptor.getOperands(buffer.get(i))[1];
 			String s20 = Adaptor.getOperands(assembly)[0];
 			String s21 = Adaptor.getOperands(assembly)[1];
 			String s22 = Adaptor.getOperands(assembly)[2];
+
+			System.out.println(" assembly---"+s1);
+			System.out.println(" s1---"+s1);
+			System.out.println(" s2---"+s1);
+			System.out.println(" s20---"+s1);
+			System.out.println(" s21---"+s1);
+			System.out.println(" s22---"+s1);
 			if(assembly.contains("LW\t")){
 				if (s21.equals(s1)) {
 					return true;
@@ -130,7 +139,7 @@ public class PreIssue implements Buffers{
 					return true;
 				}
 			}else{
-				if(s21.equals(s1)||s22.equals(s1)){
+				if(s21.equals(s1)||s22.equals(s1)||s21.equals(s2)||s22.equals(s2)){
 					return true;
 				}
 			}

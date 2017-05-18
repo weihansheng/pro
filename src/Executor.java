@@ -15,14 +15,29 @@ public class Executor {
     }
     public void ALU() {
         if(this.pipeline.getPreALU().hasEmptySlot()<2){
+            //System.out.println("pipeline.getPreMEM().hasEmptySlot()"+this.pipeline.getPreMEM().hasEmptySlot());
+            //System.out.println("clock:"+"-flush-pipeline.getPreALU().buffer"+pipeline.getPreALU().buffer.toString());
             String assembly = (String)this.pipeline.getPreALU().out();
 //			ALU.offer("ALU");
             String []operands = Adaptor.getOperands(assembly);
-            if (assembly.contains("LW\t")||assembly.contains("SW\t")){
+
+            //System.out.println("clock:"+"-flush-pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
+            if (assembly.contains("LW\t")){
                 if(this.pipeline.getPreMEM().hasEmptySlot() > 0){
                     this.pipeline.getPreMEM().in(assembly);
+                    //System.out.println("clock:"+"-in-pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
+                }else {
+                    this.pipeline.getPreALU().in(assembly);
+                    //System.out.println("clock:"+"-in-pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
                 }
-            } else if(assembly.contains("ADD\t")){
+            } else if (assembly.contains("SW\t")){
+                if(this.pipeline.getPreMEM().hasEmptySlot() > 0){
+                    this.pipeline.getPreMEM().in(assembly);
+                }else {
+                    this.pipeline.getPreALU().in(assembly);
+                    //System.out.println("clock:"+"-in-pipeline.getPreMEM().buffer"+pipeline.getPreMEM().buffer.toString());
+                }
+            }else if(assembly.contains("ADD\t")){
                 int value = 0;
                 if(operands[2].contains("R")){
                     value = this.pipeline.getRegister().read(operands[1]) + this.pipeline.getRegister().read(operands[2]);
