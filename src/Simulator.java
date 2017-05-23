@@ -172,14 +172,24 @@ public class Simulator {
     public String showIFUnit(Pipeline pipeline) {
         StringBuffer buffer = new StringBuffer();
         buffer.append("\nIF Unit:\n");
-        buffer.append(String.format("\tWaiting Instruction: %s\n", pipeline.getInsFetch().getWaitingIns()));
-        buffer.append(String.format("\tExecuted Instruction: %s\n", pipeline.getInsFetch().getExecutedIns()));
+        if (pipeline.getInsFetch().getWaitingIns().equals(""))
+        {
+            buffer.append(String.format("\tWaiting Instruction:\n"));
+        }else {
+            buffer.append(String.format("\tWaiting Instruction:[%s]\n", pipeline.getInsFetch().getWaitingIns()));
+        }
+        if (pipeline.getInsFetch().getExecutedIns().equals(""))
+        {
+            buffer.append(String.format("\tExecuted Instruction:\n"));
+        }else {
+            buffer.append(String.format("\tExecuted Instruction:[%s]\n", pipeline.getInsFetch().getExecutedIns()));
+        }
         return buffer.toString();
     }
     public String showPreIssue(Pipeline pipeline) {
         int size = pipeline.getPreIssue().size();
         StringBuffer buffer = new StringBuffer();
-        buffer.append("Pre-Issue Buffer:\n");
+        buffer.append("Pre-Issue Queue:\n");
         for(int i=0;i<size;i++){
             buffer.append(String.format("\tEntry %d:[%s]\n", i, (String)pipeline.getPreIssue().get(i)));
         }
