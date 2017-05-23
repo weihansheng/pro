@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Pipeline:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c5959a4e-460a-4001-ba6c-b5ef4c3d2bdc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Simulator.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Simulator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MIPSsim.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Pipeline/Simulator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Pipeline/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Adaptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Buffers.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Executor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Instruction.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/InstructionFetch.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Issue.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Loader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Mem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Memory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Pipeline.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PostALU.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PostMEM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PreALU.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PreIssue.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PreMEM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Register.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Simulator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/WriteBack.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Writer.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Adaptor.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Adaptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Buffers.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Buffers.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Executor.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Executor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Instruction.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Instruction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/InstructionFetch.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/InstructionFetch.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Issue.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Issue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Loader.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Loader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Mem.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Mem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Memory.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Memory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Pipeline.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Pipeline.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/PostALU.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/PostALU.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/PostMEM.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/PostMEM.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/PreALU.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/PreALU.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/PreIssue.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/PreIssue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/PreMEM.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/PreMEM.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Register.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Register.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/WriteBack.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/WriteBack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pipeline/Writer.class" afterPath="$PROJECT_DIR$/out/production/Pipeline/Writer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Executor.java" afterPath="$PROJECT_DIR$/src/Executor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Simulator.java" afterPath="$PROJECT_DIR$/src/Simulator.java" />
     </list>
     <ignored path="Pipeline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,113 +77,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PreALU.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PreALU.java">
+      <file leaf-file-name="MIPSsim.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MIPSsim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="153">
+              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="20" />
               <folding>
-                <element signature="e#644#645#0" expanded="true" />
-                <element signature="e#680#681#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostALU.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PostALU.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="5" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="25" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Executor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Executor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2448">
-              <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Simulator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Simulator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="191" column="38" lean-forward="false" selection-start-line="191" selection-start-column="38" selection-end-line="191" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pipeline.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pipeline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-              <folding>
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#988#989#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Adaptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Adaptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" column="66" lean-forward="true" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstructionFetch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InstructionFetch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2873">
-              <caret line="177" column="30" lean-forward="false" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="30" />
-              <folding>
-                <element signature="e#6727#6728#0" expanded="true" />
-                <element signature="e#6765#6766#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreMEM.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PreMEM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostMEM.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PostMEM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreIssue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PreIssue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-              <folding>
-                <element signature="e#997#998#0" expanded="true" />
-                <element signature="e#1033#1034#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#806#814#0" expanded="true" />
+                <element signature="e#890#899#0" expanded="true" />
+                <element signature="method#noPreStore4SW#0;class#Issue#0" expanded="false" />
+                <element signature="e#47062#47070#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,15 +104,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>simm</find>
-      <find>ADD</find>
       <find>MUL</find>
       <find>BGTZ</find>
       <find>Break</find>
       <find>SW</find>
       <find>LW</find>
       <find>J</find>
-      <find>Johan007</find>
       <find>getPreMEM</find>
       <find>token</find>
       <find>isBreak</find>
@@ -174,7 +119,6 @@
       <find>setNums</find>
       <find>waitingIns</find>
       <find>executedIns</find>
-      <find>System</find>
       <find>in</find>
       <find>buffer</find>
       <find>processBranch</find>
@@ -186,6 +130,10 @@
       <find>remove</find>
       <find>getPreALU</find>
       <find>ALU</find>
+      <find>readFileByLines</find>
+      <find>Johan007</find>
+      <find>proj2</find>
+      <find>System</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,25 +147,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Adaptor.java" />
-        <option value="$PROJECT_DIR$/src/Loader.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/Writer.java" />
-        <option value="$PROJECT_DIR$/src/Memory.java" />
-        <option value="$PROJECT_DIR$/src/Register.java" />
-        <option value="$PROJECT_DIR$/src/WriteBack.java" />
+        <option value="$PROJECT_DIR$/src/Adaptor.java" />
+        <option value="$PROJECT_DIR$/src/Buffers.java" />
+        <option value="$PROJECT_DIR$/src/Executor.java" />
         <option value="$PROJECT_DIR$/src/Instruction.java" />
         <option value="$PROJECT_DIR$/src/InstructionFetch.java" />
-        <option value="$PROJECT_DIR$/src/Mem.java" />
-        <option value="$PROJECT_DIR$/src/Pipeline.java" />
         <option value="$PROJECT_DIR$/src/Issue.java" />
-        <option value="$PROJECT_DIR$/src/PreIssue.java" />
+        <option value="$PROJECT_DIR$/src/Loader.java" />
+        <option value="$PROJECT_DIR$/src/Mem.java" />
+        <option value="$PROJECT_DIR$/src/Memory.java" />
+        <option value="$PROJECT_DIR$/src/Pipeline.java" />
         <option value="$PROJECT_DIR$/src/PreALU.java" />
-        <option value="$PROJECT_DIR$/src/PostALU.java" />
         <option value="$PROJECT_DIR$/src/PostMEM.java" />
+        <option value="$PROJECT_DIR$/src/PostALU.java" />
         <option value="$PROJECT_DIR$/src/PreMEM.java" />
+        <option value="$PROJECT_DIR$/src/PreIssue.java" />
+        <option value="$PROJECT_DIR$/src/Register.java" />
+        <option value="$PROJECT_DIR$/src/WriteBack.java" />
+        <option value="$PROJECT_DIR$/src/Writer.java" />
         <option value="$PROJECT_DIR$/src/Simulator.java" />
-        <option value="$PROJECT_DIR$/src/Executor.java" />
+        <option value="$PROJECT_DIR$/src/MIPSsim.java" />
       </list>
     </option>
   </component>
@@ -248,23 +198,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Pipeline" />
+              <option name="myItemId" value="Pipeline2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Pipeline" />
+              <option name="myItemId" value="Pipeline2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pipeline2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pipeline2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pipeline2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pipeline2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,6 +252,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v7.10.0/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="pipeline2" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -295,13 +280,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Simulator">
-    <configuration default="false" name="Simulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.MIPSsim">
+    <configuration default="false" name="MIPSsim" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Simulator" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="MIPSsim" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -757,11 +742,11 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Simulator" />
+      <item index="0" class="java.lang.String" itemvalue="Application.MIPSsim" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Simulator" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MIPSsim" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -820,16 +805,19 @@
       <workItem from="1494663008570" duration="19697000" />
       <workItem from="1494767176791" duration="2410000" />
       <workItem from="1495100945525" duration="9336000" />
-      <workItem from="1495512760040" duration="1012000" />
+      <workItem from="1495512760040" duration="1076000" />
+      <workItem from="1495514387362" duration="667000" />
+      <workItem from="1495515066551" duration="1140000" />
+      <workItem from="1495528100689" duration="427000" />
+      <workItem from="1495528906246" duration="895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62559000" />
+    <option name="totallyTimeSpent" value="65752000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -840,21 +828,21 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.313783" sideWeight="0.5031348" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.313783" sideWeight="0.4968652" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.313783" sideWeight="0.4968652" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15282132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15282132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -913,20 +901,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Mem.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Issue.java</url>
-          <line>105</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
@@ -936,154 +910,49 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Simulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreALU.java">
+    <entry file="file://$PROJECT_DIR$/src/MIPSsim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#806#814#0" expanded="true" />
+            <element signature="e#890#899#0" expanded="true" />
+            <element signature="method#noPreStore4SW#0;class#Issue#0" expanded="false" />
+            <element signature="e#47062#47070#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PreALU.java" />
     <entry file="file://$PROJECT_DIR$/src/PreALUB.java" />
-    <entry file="file://$PROJECT_DIR$/src/PostMEM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreMEM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreIssue.java">
+    <entry file="file://$PROJECT_DIR$/src/PostMEM.java" />
+    <entry file="file://$PROJECT_DIR$/src/PreMEM.java" />
+    <entry file="file://$PROJECT_DIR$/src/PreIssue.java" />
+    <entry file="file://$PROJECT_DIR$/src/Adaptor.java" />
+    <entry file="file://$PROJECT_DIR$/src/Buffers.java" />
+    <entry file="file://$PROJECT_DIR$/src/Executor.java" />
+    <entry file="file://$PROJECT_DIR$/src/Instruction.java" />
+    <entry file="file://$PROJECT_DIR$/src/MIPSsim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#806#814#0" expanded="true" />
+            <element signature="e#890#899#0" expanded="true" />
+            <element signature="method#noPreStore4SW#0;class#Issue#0" expanded="false" />
+            <element signature="e#47062#47070#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adaptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Buffers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="124" column="5" lean-forward="false" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Instruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3840">
-          <caret line="258" column="1" lean-forward="false" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Simulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreALU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PreALU.java" />
     <entry file="file://$PROJECT_DIR$/src/PreALUB.java" />
-    <entry file="file://$PROJECT_DIR$/src/PostMEM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreMEM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreIssue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adaptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Buffers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PostMEM.java" />
+    <entry file="file://$PROJECT_DIR$/src/PreMEM.java" />
+    <entry file="file://$PROJECT_DIR$/src/PreIssue.java" />
+    <entry file="file://$PROJECT_DIR$/src/Adaptor.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/Number.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -1114,56 +983,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PostALUB.java" />
     <entry file="file://$PROJECT_DIR$/src/PreALUB.java" />
-    <entry file="file://$PROJECT_DIR$/src/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Writer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Memory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#1735#1736#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#715#716#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Instruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3298">
-          <caret line="194" column="55" lean-forward="false" selection-start-line="194" selection-start-column="55" selection-end-line="194" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WriteBack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/AbstractSequentialList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -1233,48 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Issue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="e#2148#2149#0" expanded="true" />
-            <element signature="e#2212#2213#0" expanded="true" />
-            <element signature="method#noPreStore4SW#0;class#Issue#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreIssue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding>
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adaptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="66" lean-forward="true" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,78 +1063,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreALU.java">
+    <entry file="file://$PROJECT_DIR$/src/Adaptor.java" />
+    <entry file="file://$PROJECT_DIR$/src/Buffers.java" />
+    <entry file="file://$PROJECT_DIR$/src/Executor.java" />
+    <entry file="file://$PROJECT_DIR$/src/Instruction.java" />
+    <entry file="file://$PROJECT_DIR$/src/InstructionFetch.java" />
+    <entry file="file://$PROJECT_DIR$/src/Issue.java" />
+    <entry file="file://$PROJECT_DIR$/src/Loader.java" />
+    <entry file="file://$PROJECT_DIR$/src/Mem.java" />
+    <entry file="file://$PROJECT_DIR$/src/Memory.java" />
+    <entry file="file://$PROJECT_DIR$/src/Pipeline.java" />
+    <entry file="file://$PROJECT_DIR$/src/PreALU.java" />
+    <entry file="file://$PROJECT_DIR$/src/PostMEM.java" />
+    <entry file="file://$PROJECT_DIR$/src/PostALU.java" />
+    <entry file="file://$PROJECT_DIR$/src/PreMEM.java" />
+    <entry file="file://$PROJECT_DIR$/src/PreIssue.java" />
+    <entry file="file://$PROJECT_DIR$/src/Register.java" />
+    <entry file="file://$PROJECT_DIR$/src/WriteBack.java" />
+    <entry file="file://$PROJECT_DIR$/src/Writer.java" />
+    <entry file="file://$PROJECT_DIR$/src/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/MIPSsim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        <state relative-caret-position="153">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#806#814#0" expanded="true" />
+            <element signature="e#890#899#0" expanded="true" />
+            <element signature="method#noPreStore4SW#0;class#Issue#0" expanded="false" />
+            <element signature="e#47062#47070#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreMEM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PostMEM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InstructionFetch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="177" column="30" lean-forward="false" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="30" />
-          <folding>
-            <element signature="e#6727#6728#0" expanded="true" />
-            <element signature="e#6765#6766#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding>
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Simulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="191" column="38" lean-forward="false" selection-start-line="191" selection-start-column="38" selection-end-line="191" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PostALU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+              <type id="javaee-facet-resources" />
+              <type id="jpa-descriptors" />
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>Pipeline:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Pipeline</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
